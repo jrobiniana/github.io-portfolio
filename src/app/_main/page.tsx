@@ -11,7 +11,7 @@ export default function Main() {
         <br />
         <h2>{Data.summary}</h2>
         <br />
-        <a href="/assets/resume.pdf" download="CV - Jono Rafael Obiniana.pdf" className="text-sm font-medium text-zinc-900 underline transition hover:text-zinc-700 dark:text-zinc-100 dark:hover:text-zinc-300">
+        <a href="./assets/resume.pdf" download="CV - Jono Rafael Obiniana.pdf" className="text-sm font-medium text-zinc-900 underline transition hover:text-zinc-700 dark:text-zinc-100 dark:hover:text-zinc-300">
           Download Resume
         </a>
       </main>
