@@ -36,6 +36,23 @@ export default function Main() {
                 {f.charAt(0).toUpperCase() + f.slice(1)}
               </button>
             ))}
+            <label className="sr-only" htmlFor="tech-filter">
+              Filter tech stack
+            </label>
+          </div>
+          <div className={styles.filterDropDown}>
+            <select
+              id="tech-filter"
+              value={filter}
+              onChange={(event) => onFilterClick(event.target.value)}
+              className={styles.filterSelect}
+            >
+              {filters.map((f) => (
+                <option key={f} value={f}>
+                  {f.charAt(0).toUpperCase() + f.slice(1)}
+                </option>
+              ))}
+            </select>
           </div>
         </div>
 

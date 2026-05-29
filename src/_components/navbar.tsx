@@ -1,8 +1,13 @@
+"use client";
+
+import { useRouter } from "next/navigation";
 import Link from "next/link";
 import Image from "next/image";
 import logo from "./logos/jro-logo.png";
+import styles from "./navbar.module.css";
 
 export default function Navbar() {
+  const router = useRouter();
   const navLinks = [
     { label: "Home", href: "/#main" },
     { label: "Tech Stack", href: "/#tech-stack" },
@@ -13,19 +18,33 @@ export default function Navbar() {
   ];
 
   return (
-    <nav className="sticky top-0 z-50 border-b border-zinc-200 bg-white dark:border-zinc-800 dark:bg-black">
-      <div className="flex w-full max-w-3xl items-center justify-between px-16 py-4 sm:mx-auto">
-        <Link href="/#main" className="flex items-center gap-3">
-          <Image src={logo} alt="Jono Rafael" width={32} height={32} className="h-8 w-8" />
+    <nav className={styles.nav}>
+      <div className={styles.container}>
+        <Link href="/#main" className={styles.logoLink}>
+          <Image src={logo} alt="Jono Rafael" width={32} height={32} className={styles.logoImage} />
           <span className="sr-only">Jono Rafael</span>
         </Link>
-        <ul className="flex gap-8 sm:gap-6">
+        <div className={styles.navDropdown}>
+          <label htmlFor="nav-select" className="sr-only">
+            Navigate sections
+          </label>
+          <select
+            id="nav-select"
+            defaultValue="/#main"
+            className={styles.navSelect}
+            onChange={(event) => router.push(event.target.value)}
+          >
+            {navLinks.map((link) => (
+              <option key={link.href} value={link.href}>
+                {link.label}
+              </option>
+            ))}
+          </select>
+        </div>
+        <ul className={styles.navList}>
           {navLinks.map((link) => (
-            <li key={link.href}>
-              <Link
-                href={link.href}
-                className="text-sm font-medium text-zinc-700 transition hover:text-zinc-900 dark:text-zinc-400 dark:hover:text-zinc-100"
-              >
+            <li key={link.href} className={styles.navItem}>
+              <Link href={link.href} className={styles.navLink}>
                 {link.label}
               </Link>
             </li>

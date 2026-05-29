@@ -21,7 +21,7 @@
 }
 
 .cardLogo {
-  @apply h-16 w-16 flex-shrink-0 rounded-lg object-contain;
+  @apply h-16 w-16 shrink-0 rounded-lg object-contain;
 }
 
 .cardContent {
