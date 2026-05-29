@@ -1,0 +1,41 @@
+@reference "../globals.css";
+
+.root {
+  @apply flex flex-col flex-1 items-center justify-center bg-zinc-50 font-sans dark:bg-black;
+}
+
+.main {
+  @apply flex flex-1 w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start;
+}
+
+.title {
+  @apply max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50;
+}
+
+.list {
+  @apply w-full space-y-4 mt-8;
+}
+
+.card {
+  @apply flex items-center gap-4 rounded-3xl border border-zinc-200 bg-zinc-50 p-6 dark:border-zinc-800 dark:bg-zinc-950;
+}
+
+.cardLink {
+  @apply flex items-center gap-4 w-full text-inherit no-underline;
+}
+
+.cardLogo {
+  @apply h-12 w-12 flex-shrink-0 rounded-lg object-contain;
+}
+
+.cardContent {
+  @apply flex flex-col justify-center;
+}
+
+.cardType {
+  @apply font-semibold text-black dark:text-white capitalize;
+}
+
+.cardValue {
+  @apply text-sm text-zinc-600 dark:text-zinc-400 break-all;
+}

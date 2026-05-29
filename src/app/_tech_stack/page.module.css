@@ -1,0 +1,61 @@
+@reference "../globals.css";
+
+.root {
+  @apply flex flex-col flex-1 items-center justify-center bg-zinc-50 font-sans dark:bg-black;
+}
+
+.main {
+  @apply flex flex-1 w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start;
+}
+
+.title {
+  @apply max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50;
+}
+
+.fullWidth {
+  @apply w-full;
+}
+
+.filterBar {
+  @apply mt-6 flex w-full flex-col gap-2 sm:flex-row sm:items-center sm:justify-between;
+}
+
+.filterInput {
+  @apply w-full rounded-xl border border-zinc-200 bg-zinc-50 px-4 py-3 text-sm text-zinc-900 outline-none transition focus:border-zinc-400 focus:ring-2 focus:ring-zinc-200 dark:border-zinc-800 dark:bg-zinc-950 dark:text-zinc-100 dark:focus:border-zinc-600 dark:focus:ring-zinc-800 sm:w-72;
+}
+
+.filterCount {
+  @apply text-sm text-zinc-500 dark:text-zinc-400;
+}
+
+.filterButton {
+  @apply rounded-xl border px-4 py-3 text-sm transition border-zinc-200 bg-zinc-50 text-zinc-900 hover:bg-white dark:border-zinc-800 dark:bg-zinc-950 dark:text-zinc-100 dark:hover:bg-zinc-900;
+}
+
+.filterButtonActive {
+  @apply border-zinc-400 bg-zinc-200 text-zinc-900 dark:border-zinc-600 dark:bg-zinc-800 dark:text-zinc-100;
+}
+
+.grid {
+  @apply mt-8 grid w-full grid-cols-2 gap-3 sm:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5;
+}
+
+.cardLink {
+  @apply flex aspect-square flex-col justify-between overflow-hidden rounded-3xl border border-zinc-200 bg-zinc-50 p-3 text-sm text-zinc-900 transition hover:border-zinc-300 hover:bg-white dark:border-zinc-800 dark:bg-zinc-950 dark:text-zinc-100 dark:hover:border-zinc-700 dark:hover:bg-zinc-900;
+}
+
+.logoWrapper {
+  @apply flex flex-1 items-center justify-center;
+}
+
+.cardLogo {
+  @apply h-10 w-10 object-contain;
+}
+
+.cardLabel {
+  @apply text-center text-sm font-medium text-zinc-900 dark:text-zinc-100;
+}
+
+.emptyState {
+  @apply rounded-xl border border-dashed border-zinc-300 bg-zinc-50 px-4 py-6 text-sm text-zinc-500 dark:border-zinc-700 dark:bg-zinc-950 dark:text-zinc-400;
+}
