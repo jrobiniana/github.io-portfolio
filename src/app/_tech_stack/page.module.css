@@ -33,7 +33,7 @@
 }
 
 .filterButton {
-  @apply rounded-xl border px-4 py-3 text-sm transition border-zinc-200 bg-zinc-50 text-zinc-900 hover:bg-white dark:border-zinc-800 dark:bg-zinc-950 dark:text-zinc-100 dark:hover:bg-zinc-900;
+  @apply rounded-xl border px-4 py-3 text-sm transition border-zinc-200 bg-zinc-50 text-zinc-900 hover:bg-white dark:border-zinc-800 dark:bg-zinc-950 dark:text-zinc-100 dark:hover:bg-zinc-900 hover:cursor-pointer;
 }
 
 .filterButtonActive {
@@ -49,7 +49,7 @@
 }
 
 .cardLink {
-  @apply flex aspect-square flex-col justify-between overflow-hidden rounded-3xl border border-zinc-200 bg-zinc-50 p-3 text-sm text-zinc-900 transition hover:border-zinc-300 hover:bg-white dark:border-zinc-800 dark:bg-zinc-950 dark:text-zinc-100 dark:hover:border-zinc-700 dark:hover:bg-zinc-900;
+  @apply flex aspect-square flex-col justify-between overflow-hidden rounded-3xl border border-zinc-200 bg-zinc-50 p-3 text-sm text-zinc-900 transition hover:border-zinc-300 hover:bg-white dark:border-zinc-800 dark:bg-zinc-950 dark:text-zinc-100 dark:hover:border-zinc-700 dark:hover:bg-zinc-900 hover:rotate-3 hover:scale-105;
 }
 
 .logoWrapper {
